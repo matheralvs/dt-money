@@ -10,17 +10,17 @@ interface Transaction {
   createdAt: string;
 }
 
-interface TransactionContextType {
+interface TransactionsContextType {
   transactions: Transaction[];
 }
 
-interface TransactionProviderProps {
+interface TransactionsProviderProps {
   children: ReactNode;
 }
 
-export const TransactionsContext = createContext({} as TransactionContextType);
+export const TransactionsContext = createContext({} as TransactionsContextType);
 
-export function TransactionProvider({ children }: TransactionProviderProps) {
+export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   async function loadTransactions() {
