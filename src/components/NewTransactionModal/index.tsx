@@ -8,10 +8,9 @@ import {
   TransactionTypeButton,
 } from "./styles";
 import * as z from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller } from "react-hook-form";
-import { api } from "../../lib/axios";
+
 import { useContext } from "react";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 
